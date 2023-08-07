@@ -9,9 +9,6 @@ from line.funcs import *
 from triangle.funcs import *
 from conics.funcs import circ_gen
 
-
-
-
 A=np.array([1, -1])
 B=np.array([-4, 6])
 C=np.array([-3, -5])
