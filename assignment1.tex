@@ -221,13 +221,13 @@ The equation of respective angle bisector are then given by
 \label{eq:solve2}\dfrac{\vec{n}^{\top}_i\vec{x}-c_i}{\norm{\vec{n}_i}} =  \pm\dfrac{\vec{n}^{\top}_j\vec{x}-c_j}{\norm{\vec{n}_j}}\qquad i \neq j
 \end{align}
 Substitute numerical values and find the equations of the angle bisectors of $A$, $B$ and $C$.\\
-\solution Using the equation~\eqref{eq:solve1} to calculate the normal eqautions of $AB$,$BC$ and $CA$ :-
+\solution Using the \eqref{eq:solve1} to calculate the normal eqautions of $AB$,$BC$ and $CA$ :-
 \begin{align}
-AB :   \vec{n}^{\top}_1\vec{x} - c_1  &=  \myvec{7 \; 5}\vec{x} - 2 &=0,\\
-BC :   \vec{n}^{\top}_2\vec{x} - c_2  &=  \myvec{11 \; 1}\vec{x} + 38 &=0,\\
-CA :   \vec{n}^{\top}_3\vec{x} - c_3  &=  \myvec{1 \; -1}\vec{x} - 2 &=0,
+AB :\vec{n}^{\top}_1\vec{x} - c_1  &=  \myvec{7&5}\vec{x} - 2 &=0,\\
+BC :\vec{n}^{\top}_2\vec{x} - c_2  &=  \myvec{11&1}\vec{x} + 38 &=0,\\
+CA :\vec{n}^{\top}_3\vec{x} - c_3  &=  \myvec{1&-1}\vec{x} - 2 &=0.
 \end{align}
-Using the equation~\eqref{eq:solve2}to calculate the angle bisector of angle $C$ :-
+Using the \eqref{eq:solve2} to calculate the angle bisector of angle $C$ :-
 \begin{align}
 \dfrac{\vec{n}^{\top}_i\vec{x}-c_i}{\norm{\vec{n}_i}} =  \pm\dfrac{\vec{n}^{\top}_j\vec{x}-c_j}{\norm{\vec{n}_j}}
 \end{align}
@@ -240,14 +240,14 @@ Internal angular bisector can be evaluated by taking $'+'$ sign in the above equ
 \end{figure}
 \begin{align}
 \dfrac{\vec{n}^{\top}_2\vec{x}-c_2}{\norm{\vec{n}_2}} &=  \dfrac{\vec{n}^{\top}_3\vec{x}-c_3}{\norm{\vec{n}_3}}\\[8pt]
-\dfrac{\myvec{11\;1}\vec{x}+38}{\sqrt{\vec{n}^{\top}_2\vec{n}_2}} &=  \dfrac{\myvec{1\;-1}\vec{x}-2}{\sqrt{\vec{n}^{\top}_3 \vec{n}_3}}
+\dfrac{\myvec{11 & 1}\vec{x}+38}{\sqrt{\vec{n}^{\top}_2\vec{n}_2}} &=  \dfrac{\myvec{1 &-1}\vec{x}-2}{\sqrt{\vec{n}^{\top}_3 \vec{n}_3}}
 \end{align}
 \begin{align}
-\implies\dfrac{\myvec{11\;1}\vec{x}+38}{\sqrt{\myvec{11\;1}\myvec{11\\1}}}&=\dfrac{\myvec{1\;-1}\vec{x}-2}{\sqrt{\myvec{1\;-1}\myvec{1\\-1}}}\\[8pt]
-\implies\dfrac{\myvec{11\;1}\vec{x}}{\sqrt{122}} - \dfrac{\myvec{1\;-1}\vec{x}}{\sqrt{2}}&=\dfrac{-2}{\sqrt{2}} - \dfrac{38}{\sqrt{122}}\\[12pt]
-\label{eq:solve}\implies\myvec{\dfrac{11-\sqrt{61}}{\sqrt{122}} \; \dfrac{1+\sqrt{61}}{\sqrt{122}}}\vec{x}&=-\dfrac{2\sqrt{61}+38}{\sqrt{122}}
+\implies\dfrac{\myvec{11&1}\vec{x}+38}{\sqrt{\myvec{11&1}\myvec{11\\1}}}&=\dfrac{\myvec{1 &-1}\vec{x}-2}{\sqrt{\myvec{1 &-1}\myvec{1\\-1}}}\\
+\implies\dfrac{\myvec{11&1}\vec{x}}{\sqrt{122}} - \dfrac{\myvec{1 &-1}\vec{x}}{\sqrt{2}}&=\dfrac{-2}{\sqrt{2}} - \dfrac{38}{\sqrt{122}}\\
+\label{eq:solve}\implies\myvec{\dfrac{11-\sqrt{61}}{\sqrt{122}} & \dfrac{1+\sqrt{61}}{\sqrt{122}}}\vec{x}&=-\dfrac{2\sqrt{61}+38}{\sqrt{122}}
 \end{align}
-Hence, the equation~\eqref{eq:solve} is the equation of internal angular bisector of angle $C$.
+Hence, the \eqref{eq:solve} is the equation of internal angular bisector of angle $C$.
 \end{document}
 
 
