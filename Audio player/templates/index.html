@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>DJ___SK</title>
+</head>
+<body>
+    <h1>DJ___SK</h1>
+    <audio controls id="audio-player">
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <ul id="song-list">
+        <!-- List of songs -->
+        <li onclick="playSong(0)">Song 1</li>
+        <li onclick="playSong(1)">Song 2</li>
+        <li onclick="playSong(2)">Song 3</li>
+        <li onclick="playSong(3)">Song 4</li>
+        <li onclick="playSong(4)">Song 5</li>
+        <li onclick="playSong(5)">Song 6</li>
+        <li onclick="playSong(6)">Song 7</li>
+        <li onclick="playSong(7)">Song 8</li>
+        <li onclick="playSong(8)">Song 9</li>
+        <li onclick="playSong(9)">Song 10</li>
+        <li onclick="playSong(10)">Song 11</li>
+        <li onclick="playSong(11)">Song 12</li>
+        <li onclick="playSong(12)">Song 13</li>
+        <li onclick="playSong(13)">Song 14</li>
+        <li onclick="playSong(14)">Song 15</li>
+        <li onclick="playSong(15)">Song 16</li>
+        <li onclick="playSong(16)">Song 17</li>
+        <li onclick="playSong(17)">Song 18</li>
+        <li onclick="playSong(18)">Song 19</li>
+        <li onclick="playSong(19)">Song 20</li>
+        <li onclick="playSong(20)">Song 21</li>
+        <li onclick="playSong(21)">Song 22</li>
+        <li onclick="playSong(22)">Song 23</li>
+        <li onclick="playSong(23)">Song 24</li>
+        <li onclick="playSong(24)">Song 25</li>
+        <li onclick="playSong(25)">Song 26</li>
+        <li onclick="playSong(26)">Song 27</li>
+        <li onclick="playSong(27)">Song 28</li>
+        <li onclick="playSong(28)">Song 29</li>
+        <li onclick="playSong(29)">Song 30</li>
+        <li onclick="playSong(30)">Song 31</li>
+        <li onclick="playSong(31)">Song 32</li>
+        <li onclick="playSong(32)">Song 33</li>
+        <li onclick="playSong(33)">Song 34</li>
+        <li onclick="playSong(34)">Song 35</li>
+        <li onclick="playSong(35)">Song 36</li>
+        <li onclick="playSong(36)">Song 37</li>
+        <li onclick="playSong(37)">Song 38</li>
+        <li onclick="playSong(38)">Song 39</li>
+        <li onclick="playSong(39)">Song 40</li>
+        <li onclick="playSong(40)">Song 41</li>
+        <li onclick="playSong(41)">Song 42</li>
+        <li onclick="playSong(42)">Song 43</li>
+        <li onclick="playSong(43)">Song 44</li>
+        <li onclick="playSong(44)">Song 45</li>
+        <li onclick="playSong(45)">Song 46</li>
+        <li onclick="playSong(46)">Song 47</li>
+    </ul>
+    <div id="now-playing">Now Playing: </div>
+    <button onclick="shuffleQueue()">Shuffle Queue</button>
+    <button onclick="playPreviousSong()">Play Previous Song</button>
+    <button onclick="playNextSong()">Play Next Song</button>
+    <button onclick="resetQueue()">Reset Queue</button>
+
+</body>
+<script src="/templates/script.js"></script>
+</html>
