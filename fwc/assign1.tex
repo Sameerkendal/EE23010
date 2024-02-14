@@ -1,0 +1,299 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikW and tkz-base
+\usepackage{listings}
+\usepackage{gvv}
+\usepackage{tfrupee}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\setlength{\parindent}{0pt}
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{
+%	\logo{
+FWC Assignment-1
+%	}
+}
+\author{ Sameer Kendal$^{*}$ FWC22257% <-this % stops a space
+	\thanks{}
+	
+}
+%\title{
+%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%}
+
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+%\title{Matrix Analysis through Octave}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+%\author{<-this % stops a space
+%\thanks{}}
+%}
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% make the title area
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+
+%\begin{abstract}
+%%\boldmath
+%In this letter, an algorithm for evaluating the exact analytical bit error rate  (BER)  for the piecewise linear (PL) combiner for  multiple relays is presented. Previous results were available only for upto three relays. The algorithm is unique in the sense that  the actual mathematical expressions, that are prohibitively large, need not be explicitly obtained. The diversity gain due to multiple relays is shown through plots of the analytical BER, well supported by simulations. 
+%
+%\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the journal you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%Cooperative diversity, decode and forward, piecewise linear
+%\end{IEEEkeywords}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+%\IEEEpeerreviewmaketitle
+
+\begin{enumerate}
+\item Write the vector equation of the line passing through $\brak{1,2,3}$ and perpendicular to plane $\vec{r}\cdot\brak{\vec{i}+2\vec{j}-5\vec{k}}=0$.\\
+
+\item In the interval $\pi/2 < x < \pi$\\,find the value of $x$ such that $\myvec{2\sin{x} & 3 \\1 & 2\sin{x}}$ is singular.\\
+
+\item Find the solution of the differential equation $\dfrac{dy}{dx} = x^{3}e^{-2y}$.\\
+\item Write the integrating factor of the differential equation 
+\begin{align}
+\sqrt{x}\dfrac{dy}{dx}+y = e^{-2\sqrt{x}}
+\end{align}.\\
+
+\item Write the direction ratio's of vector $3\vec{a}+2\vec{b}$ where $\vec{a} = \vec{i}+\vec{j}-2\vec{k}$ and $\vec{b}=2\vec{i}-4\vec{j}+5\vec{k}$.\\
+
+\item Find the projection of the vector $\vec{a} = 2\vec{i}+3\vec{j}+2\vec{k}$ on the vector $\vec{b} = 2\vec{i}+2\vec{j}+\vec{k}$.\\ 
+
+\item Evaluate $\int_{0}^{\pi/4} log\brak{1+ \tan{x}}dx$.\\
+\item Find $\int \dfrac{x}{\brak{x^{2}+1}\brak{x-1}}$
+\begin{center} $\vec{OR}$ \\ \end{center}
+Find $\int_0^{\frac{1}{\sqrt{2}}} \dfrac{\sin^{-1}{x}}{\brak{1-x^{2}}^{\frac{3}{2}}}$.\\
+
+\item Four cards are drawn successively with replacement from a well shuffled deck of 52 cards.What is the probability that\\
+\begin{enumerate}
+\item all the four cards are spades ?\\
+\item only 2 cards are spades?
+\end{enumerate}
+\begin{center} $\vec{OR}$ \\ \end{center}
+A pair of dice is thrown four times. If getting a doublet is considered a success,find the probablity distribution of number of successes. Hence find the mean of distribution.
+
+\item Prove that $\left [ \vec{a},\vec{b} + \vec{c},\vec{d} \right ] = \left [ \vec{a},\vec{b},\vec{d} \right] + \left[ \vec{a},\vec{c},\vec{d} \right]$.\\
+
+\item Find the shortest distance between the following line:
+$\vec{r}=2\vec{i}-5\vec{j}+\vec{k}+\lambda\brak{3\vec{i}+2\vec{j}+6\vec{k}}$ and \\
+$\vec{r}=7\vec{i}-6\vec{k}+\lambda\brak{\vec{i}+2\vec{j}+2\vec{k}}$.
+
+\item Prove that \\
+$2\tan^{-1}{(\dfrac{1}{2})} + \tan^{-1}{(\frac{1}{7})} = \sin^{-1}{(\dfrac{31}{25\sqrt{2}})}$.
+\begin{center} $\vec{OR}$ \\ \end{center}
+Solve for $x$ : $\tan^{-1}{(\frac{1-x}{1+x})}= \frac{1}{2} \tan^{-1}{x} , x>0$.\\
+
+\item For what value of $\lambda$ the function defined by 
+\begin{align} f(x) &= \begin{cases}\lambda\brak{x^2 +2},&if x\leq0 \\ 4x+6 , &if x>0 \end{cases} \end{align}
+is continuous at $x=0$? Hence check the differentiability of $f(x)$ at $x=0$.\\
+
+\item If $x$=$ae^t\brak{\sin{t}+\cos{t}}$ and $y=ae^t \brak{\sin{t}-\cos{t}}$, prove that $\dfrac{dy}{dx} = \dfrac{x+y}{x-y}$.\\
+
+\item If $y$= $Ae^{mx}+Be^{nx}$ ,show that $\dfrac{d^2 y}{dx^2}-\brak{m+n}\dfrac{dy}{dx}+mny = 0$.\\
+
+\item Find $\int \dfrac{x+3}{\sqrt{5-4x-2x^2}}$.\\
+
+\item Evaluate: $\int_{-2}^{2}\frac{x^2}{1+5^x}dx$.\\
+
+\item If \begin{align}f(x) &= \begin{cases}\frac{\sin(a+1)x + 2\sin x}{x}, &x<0\\ 2, &x=0 \\ \frac{\sqrt{1+bx}-1}{x}, &x>0 \end{cases}\end{align} is continuous at $x=0$, then find the values of $a$ and $b$.\\
+
+\item A typist charges \rupee 145 for typing 10 English and 3 Hindi pages, while charges for typing 3 English and 10 Hindi pages are \rupee 180. Using matrices, find the charges of typing one English and one English page separately. However typist charged only \rupee 2 per page from a poor student Shyam for 5 Hindi pages. How much less was charged from this peeo boy? Which values are reflected in this problem?\\
+
+\item Solve for x: $\tan^{-1}(x-1) + \tan^{-1}(x+1) = \tan^{-1}(3x)$.
+\begin{center} $\vec{OR}$ \\ \end{center}
+Prove that $\tan^{-1}\brak{\frac{6x-8x^3}{1-12x^2}} + \tan^{-1}\brak{\frac{4x}{1-4x^2}} = \tan^{-1}2x; \abs{2x}<\frac{1}{\sqrt{3}}$.\\
+
+\item Using the method of integration, find the area of the triangular region whose vertices are (2,-2), (4,-3) and (1,2).\\
+
+\item Using properties of determinants, prove that
+\begin{align}\mydet{\brak{x+y}^2 & zx & zy \\ zx & \brak{z+y}^2 & xy \\ zy & xy & \brak{z+x}^2} = 2xyz\brak{x+y+z}^3\end{align}
+\begin{center} $\vec{OR}$ \\ \end{center}
+If $A = \myvec{1 & 0 & 2 \\ 0 & 2 & 1 \\ 2 & 0 & 3}$ and $A^3 - 6A^2 + 7A + kI_3 = O$ find $k$.
+
+\item A retired person wants to invest an amount of \rupee 50,000. His broker recommends investing in the type of bonds 'A' and 'B' yielding 10\% and 9\% return respectively on the invested amount. He decides to invest at least \rupee 20,000 in bond 'A' and at least \rupee 10,000 in bond 'B'. He also wants to invest at least as much in bond 'A' as in bond 'B'. Solve this linear programming problem graphically to maximise his returns.\\
+
+\item Find the equations of the plane which contains the line of intersection of the planes
+\begin{align}\vec{r}\cdot\brak{\vec{i} -2\vec{j} + 3\vec{k}}-4&=0 \\ \vec{r}\cdot\brak{-2\vec{i} + \vec{j} + \vec{k}}+5&=0 \end{align}
+and whose intercept on x-axis is equal to that of y-axis.\\
+
+\item Prove that $y = \frac{4\sin\theta}{2+\cos\theta} - \theta$ is an increasing function of $\theta$ on $\left [0, \frac{\pi}{2}\right ]$.
+\begin{center} $\vec{OR}$ \\ \end{center}
+Show that semi-vertical angle of a cone of a maximum volume and given slant height is $\cos^{-1}\brak{\frac{1}{\sqrt{3}}}$.
+
+\item Let $A=R\times R$ and * be a binary operation on $A$ defined by $(a,b)*(c,d) = (a+c,b+d)$\\
+Show that * is commutative and associative. Find the identity elemeny for * on $A$. Also find the inverse of every element $(a, b) \in A$.\\
+
+\item Three numbers are selected at random (without replacement) from first six positive integers. Let $X$ denote the largest of the three numbers obtained. Find the probability distribution of $X$. Also, find the mean and variance of the distribution.
+
+\end{enumerate}
+
+\end{document}
